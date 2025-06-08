@@ -12,275 +12,177 @@ class CardStyles extends StatefulWidget {
 class _CardStylesState extends State<CardStyles> {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          // ردیف اول (سه کارت اول)
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 120.0,
-              vertical: 8.0,
-            ),
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  _buildCard(
-                    image: 'assets/none.png',
-                    title: 'چت روم',
-                    subtitle: 'گفتگو به صورت ناشناس!',
-                    description:
-                        'گاهی فقط لازمه بشینی، چشم‌هاتو ببندی و خودتو بسپری به صدایی که با هر کلمه تو رو به دنیایی دیگه می‌بره.\n'
-                        'در بخش «داستان صوتی» اپلیکیشن، روایت‌هایی کوتاه، احساسی و آرام‌بخش رو می‌شنوی که ذهن‌تو از تنش‌های روز جدا می‌کنه و به آرامش دعوتت می‌کنه.',
-                    backgroundColor: Colors.white,
-                  ),
-                  _buildCard(
-                    image: 'assets/book.png',
-                    title: 'داستان صوتی',
-                    subtitle: 'جادویی برای ذهن خسته',
-                    description:
-                        'گاهی فقط لازمه بشینی، چشم‌هاتو ببندی و خودتو بسپری به صدایی که با هر کلمه تو رو به دنیایی دیگه می‌بره.\n'
-                        'در بخش «داستان صوتی» اپلیکیشن، روایت‌هایی کوتاه، احساسی و آرام‌بخش رو می‌شنوی که ذهن‌تو از تنش‌های روز جدا می‌کنه و به آرامش دعوتت می‌کنه.',
-                    backgroundColor: Color(0xffF3F3F3),
-                  ),
-                  _buildCard(
-                    image: 'assets/man.png',
-                    title: 'مدیتیشن',
-                    subtitle: 'فناوری شده با هوش مصنوعی',
-                    description:
-                        'با ترکیب علم مدرن و هوش مصنوعی، تجربه‌ای کاملاً شخصی از مدیتیشن بسازید.\n'
-                        'اپلیکیشن ما با تحلیل نیازهای احساسی شما، تمرین‌های مدیتیشنی را با صدای مورد علاقه شما پیشنهاد می‌دهد.',
-                    backgroundColor: Colors.white,
-                  ),
-                ],
-              ),
-            ),
-          ),
-          // ردیف دوم (سه کارت جدید)
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 120.0,
-              vertical: 8.0,
-            ),
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  _buildCard(
-                    image: 'assets/pen.png',
-                    title: 'موسیقی آرامش‌بخش',
-                    subtitle: 'برای تمرکز و آرامش',
-                    description:
-                        'موسیقی‌هایی با ریتم ملایم و هماهنگ که ذهن شما را به سفری آرامش‌بخش می‌برند.\n'
-                        'این بخش به شما کمک می‌کند تا در میان شلوغی روزمره، لحظاتی از آرامش را تجربه کنید.',
-                    backgroundColor: Colors.white,
-                  ),
-                  _buildCard(
-                    image: 'assets/man.png',
-                    title: 'یوگا',
-                    subtitle: 'تمرین برای جسم و ذهن',
-                    description:
-                        'تمرین‌های یوگا با راهنمایی قدم‌به‌قدم برای بهبود انعطاف‌پذیری و کاهش استرس.\n'
-                        'مناسب برای همه سطوح، از مبتدی تا حرفه‌ای.',
-                    backgroundColor: Color(0xffF3F3F3),
-                  ),
-                  _buildCard(
-                    image: 'assets/note.png',
-                    title: 'یادداشت روزانه',
-                    subtitle: 'فضای شخصی برای افکار',
-                    description:
-                        'فضایی امن برای نوشتن افکار و احساسات روزانه‌تان.\n'
-                        'با ابزارهای هوشمند اپلیکیشن، می‌توانید الگوهای احساسی خود را تحلیل کنید.',
-                    backgroundColor: Colors.white,
-                  ),
-                ],
-              ),
-            ),
-          ),
-          // کارد جدید زیر همه کارت‌ها
-          SizedBox(
-            height: 800,
-            child: Stack(
-              alignment: Alignment.topCenter,
-              children: [
-                // تصویر پس‌زمینه
-                Image.asset(
-                  'assets/background.png', // عکس دلخواهت
-                  // width: 1400,
-                  // height: 600,
-                  fit: BoxFit.cover,
-                ),
-
-                // کانتینر سفید که تا وسط تصویر قرار می‌گیره
-                Positioned(
-                  top: 160, // تا وسط عکس میاد روی عکس
-                  left: 120,
-                  right: 120,
-                  child: Container(
-                    width: 1200,
-                    height: 532,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(16),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.3),
-                          spreadRadius: 2,
-                          blurRadius: 10,
-                          offset: Offset(0, 5),
-                        ),
-                      ],
-                    ),
-                    child: Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Text(
-                            'مدیتیشن چیست ؟',
-                            style: GoogleFonts.vazirmatn(
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black,
-                            ),
-                            textAlign: TextAlign.center,
-                            textDirection: TextDirection.rtl,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Text(
-                            'ناماسته چطور به ما کمک میکند ؟',
-                            style: GoogleFonts.vazirmatn(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black,
-                            ),
-                            textAlign: TextAlign.center,
-                            textDirection: TextDirection.rtl,
-                          ),
-                        ),
-                        Container(
-                          color: Color(0xffE0E0E0),
-                          height: 101,
-                          child: Center(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  'مدیتیشن، یعنی تمرین آگاهی. یعنی برگردوندن ذهن به لحظه‌ی حال، فارغ از گذشته و آینده',
-                                  style: GoogleFonts.vazirmatn(
-                                    fontSize: 14,
-                                    color: Colors.black54,
-                                  ),
-                                  textAlign: TextAlign.center,
-                                  textDirection: TextDirection.rtl,
-                                ),
-                                Text(
-                                  'با تنفس، سکوت و تمرکز، به ذهنمون یاد می‌دیم که آرام‌تر و متعادل‌تر باشه.',
-                                  style: GoogleFonts.vazirmatn(
-                                    fontSize: 14,
-                                    color: Colors.black54,
-                                  ),
-                                  textAlign: TextAlign.center,
-                                  textDirection: TextDirection.rtl,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Image.asset(
-                                'assets/testing.png',
-                                width: 384,
-                                height: 247,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          SizedBox(height: 110),
-          SizedBox(
-            height: 300, // بیشتر از top: 200
-            child: Stack(
-              clipBehavior: Clip.none, // اگر خواستی تصویر بیرون بزنه
-              children: [
-                Image.asset('assets/images.png'),
-
-                Positioned(
-                  bottom: 90, // حالا میاد بالاتر از عکس پایین
-                  left: 0,
-                  right: 0,
-                  child: Image.asset(
-                    'assets/mobile.png',
-                    fit: BoxFit.contain,
-                    height: 300, // می‌تونی اندازه هم مشخص کنی
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Column(
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final screenWidth = constraints.maxWidth;
+        final isDesktop = screenWidth >= 1435;
+        final isTablet = screenWidth >= 768 && screenWidth < 1200;
+        final isMobile = screenWidth < 768;
+        
+        return SingleChildScrollView(
+          child: Column(
             children: [
-              ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  fixedSize: Size(486, 48),
-                  backgroundColor: const Color(0xff1B1B1C),
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 24.w,
-                    vertical: 14.h,
-                  ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
-                onPressed: () {},
-                icon: Icon(Icons.do_disturb, size: 24.sp, color: Colors.white),
-                label: Text(
-                  'دانلود وب اپلیکیشن برای اندروید',
-                  style: GoogleFonts.vazirmatn(
-                    fontSize: 16.sp,
-                    color: Colors.white,
-                  ),
-                ),
+              // ردیف اول (سه کارت اول)
+              _buildCardRow(
+                isDesktop: isDesktop,
+                isTablet: isTablet,
+                isMobile: isMobile,
+                screenWidth: screenWidth,
+                cards: [
+                  {
+                    'image': 'assets/none.png',
+                    'title': 'چت روم',
+                    'subtitle': 'گفتگو به صورت ناشناس!',
+                    'description': 'گاهی فقط لازمه بشینی، چشم‌هاتو ببندی و خودتو بسپری به صدایی که با هر کلمه تو رو به دنیایی دیگه می‌بره.\n'
+                        'در بخش «داستان صوتی» اپلیکیشن، روایت‌هایی کوتاه، احساسی و آرام‌بخش رو می‌شنوی که ذهن‌تو از تنش‌های روز جدا می‌کنه و به آرامش دعوتت می‌کنه.',
+                    'backgroundColor': Colors.white,
+                  },
+                  {
+                    'image': 'assets/book.png',
+                    'title': 'داستان صوتی',
+                    'subtitle': 'جادویی برای ذهن خسته',
+                    'description': 'گاهی فقط لازمه بشینی، چشم‌هاتو ببندی و خودتو بسپری به صدایی که با هر کلمه تو رو به دنیایی دیگه می‌بره.\n'
+                        'در بخش «داستان صوتی» اپلیکیشن، روایت‌هایی کوتاه، احساسی و آرام‌بخش رو می‌شنوی که ذهن‌تو از تنش‌های روز جدا می‌کنه و به آرامش دعوتت می‌کنه.',
+                    'backgroundColor': Color(0xffF3F3F3),
+                  },
+                  {
+                    'image': 'assets/man.png',
+                    'title': 'مدیتیشن',
+                    'subtitle': 'فناوری شده با هوش مصنوعی',
+                    'description': 'با ترکیب علم مدرن و هوش مصنوعی، تجربه‌ای کاملاً شخصی از مدیتیشن بسازید.\n'
+                        'اپلیکیشن ما با تحلیل نیازهای احساسی شما، تمرین‌های مدیتیشنی را با صدای مورد علاقه شما پیشنهاد می‌دهد.',
+                    'backgroundColor': Colors.white,
+                  },
+                ],
               ),
-              SizedBox(height: 10),
-
-              ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  fixedSize: Size(486, 48),
-                  backgroundColor: const Color(0xff1B1B1C),
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 24.w,
-                    vertical: 14.h,
-                  ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
-                onPressed: () {},
-                icon: Icon(Icons.do_disturb, size: 24.sp, color: Colors.white),
-                label: Text(
-                  'دانلود وب اپلیکیشن برای آیفون',
-                  style: GoogleFonts.vazirmatn(
-                    fontSize: 16.sp,
-                    color: Colors.white,
-                  ),
-                ),
+              
+              // ردیف دوم (سه کارت جدید)
+              _buildCardRow(
+                isDesktop: isDesktop,
+                isTablet: isTablet,
+                isMobile: isMobile,
+                screenWidth: screenWidth,
+                cards: [
+                  {
+                    'image': 'assets/pen.png',
+                    'title': 'موسیقی آرامش‌بخش',
+                    'subtitle': 'برای تمرکز و آرامش',
+                    'description': 'موسیقی‌هایی با ریتم ملایم و هماهنگ که ذهن شما را به سفری آرامش‌بخش می‌برند.\n'
+                        'این بخش به شما کمک می‌کند تا در میان شلوغی روزمره، لحظاتی از آرامش را تجربه کنید.',
+                    'backgroundColor': Colors.white,
+                  },
+                  {
+                    'image': 'assets/man.png',
+                    'title': 'یوگا',
+                    'subtitle': 'تمرین برای جسم و ذهن',
+                    'description': 'تمرین‌های یوگا با راهنمایی قدم‌به‌قدم برای بهبود انعطاف‌پذیری و کاهش استرس.\n'
+                        'مناسب برای همه سطوح، از مبتدی تا حرفه‌ای.',
+                    'backgroundColor': Color(0xffF3F3F3),
+                  },
+                  {
+                    'image': 'assets/note.png',
+                    'title': 'یادداشت روزانه',
+                    'subtitle': 'فضای شخصی برای افکار',
+                    'description': 'فضایی امن برای نوشتن افکار و احساسات روزانه‌تان.\n'
+                        'با ابزارهای هوشمند اپلیکیشن، می‌توانید الگوهای احساسی خود را تحلیل کنید.',
+                    'backgroundColor': Colors.white,
+                  },
+                ],
+              ),
+              
+              // کارد جدید زیر همه کارت‌ها
+              _buildMeditationSection(
+                isDesktop: isDesktop,
+                isTablet: isTablet,
+                isMobile: isMobile,
+                screenWidth: screenWidth,
+              ),
+              
+              SizedBox(height: isMobile ? 60 : 110),
+              
+              // بخش موبایل
+              _buildMobileSection(
+                isDesktop: isDesktop,
+                isTablet: isTablet,
+                isMobile: isMobile,
+                screenWidth: screenWidth,
+              ),
+              
+              // دکمه‌های دانلود
+              _buildDownloadButtons(
+                isDesktop: isDesktop,
+                isTablet: isTablet,
+                isMobile: isMobile,
+                screenWidth: screenWidth,
               ),
             ],
           ),
-        ],
+        );
+      },
+    );
+  }
+
+  Widget _buildCardRow({
+    required bool isDesktop,
+    required bool isTablet,
+    required bool isMobile,
+    required double screenWidth,
+    required List<Map<String, dynamic>> cards,
+  }) {
+    final horizontalPadding = isDesktop ? 120.0 : (isTablet ? 60.0 : 20.0);
+    final verticalPadding = isDesktop ? 8.0 : 16.0;
+
+    if (isMobile) {
+      // در موبایل کارت‌ها به صورت عمودی نمایش داده می‌شوند
+      return Padding(
+        padding: EdgeInsets.symmetric(
+          horizontal: horizontalPadding,
+          vertical: verticalPadding,
+        ),
+        child: Column(
+          children: cards.map((card) => 
+            Padding(
+              padding: const EdgeInsets.only(bottom: 16.0),
+              child: _buildCard(
+                image: card['image'],
+                title: card['title'],
+                subtitle: card['subtitle'],
+                description: card['description'],
+                backgroundColor: card['backgroundColor'],
+                isDesktop: isDesktop,
+                isTablet: isTablet,
+                isMobile: isMobile,
+                screenWidth: screenWidth,
+              ),
+            ),
+          ).toList(),
+        ),
+      );
+    }
+
+    return Padding(
+      padding: EdgeInsets.symmetric(
+        horizontal: horizontalPadding,
+        vertical: verticalPadding,
+      ),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: cards.map((card) => 
+            _buildCard(
+              image: card['image'],
+              title: card['title'],
+              subtitle: card['subtitle'],
+              description: card['description'],
+              backgroundColor: card['backgroundColor'],
+              isDesktop: isDesktop,
+              isTablet: isTablet,
+              isMobile: isMobile,
+              screenWidth: screenWidth,
+            ),
+          ).toList(),
+        ),
       ),
     );
   }
@@ -291,57 +193,317 @@ class _CardStylesState extends State<CardStyles> {
     required String subtitle,
     required String description,
     required Color backgroundColor,
+    required bool isDesktop,
+    required bool isTablet,
+    required bool isMobile,
+    required double screenWidth,
   }) {
+    double cardWidth;
+    double imageWidth;
+    double fontSize;
+    double subtitleFontSize;
+    
+    if (isDesktop) {
+      cardWidth = 384;
+      imageWidth = 336;
+      fontSize = 16;
+      subtitleFontSize = 16;
+    } else if (isTablet) {
+      cardWidth = (screenWidth - 140) / 2;
+      imageWidth = cardWidth - 48;
+      fontSize = 15;
+      subtitleFontSize = 15;
+    } else {
+      cardWidth = screenWidth - 40;
+      imageWidth = cardWidth - 48;
+      fontSize = 14;
+      subtitleFontSize = 14;
+    }
+
     return Container(
-      width: 384,
-      constraints: BoxConstraints(minHeight: 416),
-      margin: EdgeInsets.symmetric(horizontal: 8.0),
+      width: cardWidth,
+      constraints: BoxConstraints(minHeight: isMobile ? 350 : 416),
+      margin: EdgeInsets.symmetric(horizontal: isMobile ? 0 : 8.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
         color: backgroundColor,
-        border: Border.all(color: Color(0xffF3F3F3), width: 1),
+        border: Border.all(color: const Color(0xffF3F3F3), width: 1),
       ),
       child: Padding(
         padding: const EdgeInsets.only(top: 24),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Image.asset(image, width: 336, height: 120),
-            SizedBox(height: 20),
+            Image.asset(
+              image,
+              width: imageWidth,
+              height: isMobile ? 100 : 120,
+              fit: BoxFit.contain,
+            ),
+            const SizedBox(height: 20),
             Text(
               title,
               style: GoogleFonts.vazirmatn(
-                fontSize: 16,
+                fontSize: fontSize,
                 fontWeight: FontWeight.w600,
-                color: Color(0xff1A1A1A),
+                color: const Color(0xff1A1A1A),
               ),
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               subtitle,
               style: GoogleFonts.vazirmatn(
-                fontSize: 16,
+                fontSize: subtitleFontSize,
                 fontWeight: FontWeight.w400,
-                color: Color(0xff1A1A1A),
+                color: const Color(0xff1A1A1A),
               ),
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Padding(
-              padding: const EdgeInsets.all(24.0),
+              padding: EdgeInsets.all(isMobile ? 16.0 : 24.0),
               child: Text(
                 description,
                 textAlign: TextAlign.center,
                 textDirection: TextDirection.rtl,
-                style: TextStyle(fontSize: 14, height: 1.2),
-                maxLines: 5,
+                style: TextStyle(
+                  fontSize: isMobile ? 12 : 14,
+                  height: 1.5,
+                ),
+                maxLines: isMobile ? 4 : 5,
                 overflow: TextOverflow.ellipsis,
               ),
             ),
           ],
         ),
       ),
+    );
+  }
+
+  Widget _buildMeditationSection({
+    required bool isDesktop,
+    required bool isTablet,
+    required bool isMobile,
+    required double screenWidth,
+  }) {
+    final sectionHeight = isMobile ? 600.0 : 800.0;
+    final containerTop = isMobile ? 100.0 : 160.0;
+    final containerHeight = isMobile ? 450.0 : 532.0;
+    final horizontalPadding = isDesktop ? 120.0 : (isTablet ? 60.0 : 20.0);
+
+    return SizedBox(
+      height: sectionHeight,
+      child: Stack(
+        alignment: Alignment.topCenter,
+        children: [
+          // تصویر پس‌زمینه
+          Image.asset(
+            'assets/background.png',
+            width: double.infinity,
+            fit: BoxFit.cover,
+          ),
+          // کانتینر سفید
+          Positioned(
+            top: containerTop,
+            left: horizontalPadding,
+            right: horizontalPadding,
+            child: Container(
+              height: containerHeight,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(16),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.3),
+                    spreadRadius: 2,
+                    blurRadius: 10,
+                    offset: Offset(0, 5),
+                  ),
+                ],
+              ),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(isMobile ? 12.0 : 16.0),
+                    child: Text(
+                      'مدیتیشن چیست ؟',
+                      style: GoogleFonts.vazirmatn(
+                        fontSize: isMobile ? 20 : 24,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                      textAlign: TextAlign.center,
+                      textDirection: TextDirection.rtl,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: isMobile ? 12.0 : 16.0),
+                    child: Text(
+                      'ناماسته چطور به ما کمک میکند ؟',
+                      style: GoogleFonts.vazirmatn(
+                        fontSize: isMobile ? 16 : 18,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.black,
+                      ),
+                      textAlign: TextAlign.center,
+                      textDirection: TextDirection.rtl,
+                    ),
+                  ),
+                  Container(
+                    color: Color(0xffE0E0E0),
+                    height: isMobile ? 80 : 101,
+                    margin: EdgeInsets.symmetric(vertical: isMobile ? 8 : 16),
+                    child: Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: isMobile ? 8.0 : 16.0),
+                            child: Text(
+                              'مدیتیشن، یعنی تمرین آگاهی. یعنی برگردوندن ذهن به لحظه‌ی حال، فارغ از گذشته و آینده',
+                              style: GoogleFonts.vazirmatn(
+                                fontSize: isMobile ? 12 : 14,
+                                color: Colors.black54,
+                              ),
+                              textAlign: TextAlign.center,
+                              textDirection: TextDirection.rtl,
+                            ),
+                          ),
+                          SizedBox(height: 4),
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: isMobile ? 8.0 : 16.0),
+                            child: Text(
+                              'با تنفس، سکوت و تمرکز، به ذهنمون یاد می‌دیم که آرام‌تر و متعادل‌تر باشه.',
+                              style: GoogleFonts.vazirmatn(
+                                fontSize: isMobile ? 12 : 14,
+                                color: Colors.black54,
+                              ),
+                              textAlign: TextAlign.center,
+                              textDirection: TextDirection.rtl,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'assets/testing.png',
+                          width: isMobile ? screenWidth * 0.7 : 384,
+                          height: isMobile ? 180 : 247,
+                          fit: BoxFit.contain,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildMobileSection({
+    required bool isDesktop,
+    required bool isTablet,
+    required bool isMobile,
+    required double screenWidth,
+  }) {
+    final sectionHeight = isMobile ? 250.0 : 300.0;
+    final mobileImageHeight = isMobile ? 200.0 : 300.0;
+    final bottomPosition = isMobile ? 50.0 : 90.0;
+
+    return SizedBox(
+      height: sectionHeight,
+      child: Stack(
+        clipBehavior: Clip.none,
+        children: [
+          Image.asset(
+            'assets/images.png',
+            width: double.infinity,
+            fit: BoxFit.cover,
+          ),
+          Positioned(
+            bottom: bottomPosition,
+            left: 0,
+            right: 0,
+            child: Image.asset(
+              'assets/mobile.png',
+              fit: BoxFit.contain,
+              height: mobileImageHeight,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildDownloadButtons({
+    required bool isDesktop,
+    required bool isTablet,
+    required bool isMobile,
+    required double screenWidth,
+  }) {
+    final buttonWidth = isMobile ? screenWidth * 0.9 : 486.0;
+    final buttonHeight = isMobile ? 44.0 : 48.0;
+    final fontSize = isMobile ? 14.0 : 16.0;
+    final iconSize = isMobile ? 20.0 : 24.0;
+
+    return Column(
+      children: [
+        ElevatedButton.icon(
+          style: ElevatedButton.styleFrom(
+            fixedSize: Size(buttonWidth, buttonHeight),
+            backgroundColor: const Color(0xff1B1B1C),
+            padding: EdgeInsets.symmetric(
+              horizontal: isMobile ? 16 : 24,
+              vertical: isMobile ? 12 : 14,
+            ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+          ),
+          onPressed: () {},
+          icon: Icon(Icons.android, size: iconSize, color: Colors.white),
+          label: Text(
+            'دانلود وب اپلیکیشن برای اندروید',
+            style: GoogleFonts.vazirmatn(
+              fontSize: fontSize,
+              color: Colors.white,
+            ),
+          ),
+        ),
+        SizedBox(height: 10),
+        ElevatedButton.icon(
+          style: ElevatedButton.styleFrom(
+            fixedSize: Size(buttonWidth, buttonHeight),
+            backgroundColor: const Color(0xff1B1B1C),
+            padding: EdgeInsets.symmetric(
+              horizontal: isMobile ? 16 : 24,
+              vertical: isMobile ? 12 : 14,
+            ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+          ),
+          onPressed: () {},
+          icon: Icon(Icons.phone_iphone, size: iconSize, color: Colors.white),
+          label: Text(
+            'دانلود وب اپلیکیشن برای آیفون',
+            style: GoogleFonts.vazirmatn(
+              fontSize: fontSize,
+              color: Colors.white,
+            ),
+          ),
+        ),
+        SizedBox(height: isMobile ? 20 : 40),
+      ],
     );
   }
 }
