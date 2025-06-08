@@ -172,7 +172,7 @@ class LandingHeroSection extends StatelessWidget {
                       text: 'دانلود وب اپلیکیشن برای آیفون',
                       icon: Icons.download,
                     ),
-                    SizedBox(height: 20.h),
+                    SizedBox(height: 20),
                     _buildDownloadButton(
                       text: 'دانلود وب اپلیکیشن برای اندروید',
                       icon: Icons.android,
