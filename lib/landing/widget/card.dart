@@ -18,7 +18,7 @@ class _CardStylesState extends State<CardStyles> {
         final isDesktop = screenWidth >= 1435;
         final isTablet = screenWidth >= 768 && screenWidth < 1200;
         final isMobile = screenWidth < 768;
-        
+
         return SingleChildScrollView(
           child: Column(
             children: [
@@ -33,7 +33,8 @@ class _CardStylesState extends State<CardStyles> {
                     'image': 'assets/none.png',
                     'title': 'چت روم',
                     'subtitle': 'گفتگو به صورت ناشناس!',
-                    'description': 'گاهی فقط لازمه بشینی، چشم‌هاتو ببندی و خودتو بسپری به صدایی که با هر کلمه تو رو به دنیایی دیگه می‌بره.\n'
+                    'description':
+                        'گاهی فقط لازمه بشینی، چشم‌هاتو ببندی و خودتو بسپری به صدایی که با هر کلمه تو رو به دنیایی دیگه می‌بره.\n'
                         'در بخش «داستان صوتی» اپلیکیشن، روایت‌هایی کوتاه، احساسی و آرام‌بخش رو می‌شنوی که ذهن‌تو از تنش‌های روز جدا می‌کنه و به آرامش دعوتت می‌کنه.',
                     'backgroundColor': Colors.white,
                   },
@@ -41,7 +42,8 @@ class _CardStylesState extends State<CardStyles> {
                     'image': 'assets/book.png',
                     'title': 'داستان صوتی',
                     'subtitle': 'جادویی برای ذهن خسته',
-                    'description': 'گاهی فقط لازمه بشینی، چشم‌هاتو ببندی و خودتو بسپری به صدایی که با هر کلمه تو رو به دنیایی دیگه می‌بره.\n'
+                    'description':
+                        'گاهی فقط لازمه بشینی، چشم‌هاتو ببندی و خودتو بسپری به صدایی که با هر کلمه تو رو به دنیایی دیگه می‌بره.\n'
                         'در بخش «داستان صوتی» اپلیکیشن، روایت‌هایی کوتاه، احساسی و آرام‌بخش رو می‌شنوی که ذهن‌تو از تنش‌های روز جدا می‌کنه و به آرامش دعوتت می‌کنه.',
                     'backgroundColor': Color(0xffF3F3F3),
                   },
@@ -49,13 +51,14 @@ class _CardStylesState extends State<CardStyles> {
                     'image': 'assets/man.png',
                     'title': 'مدیتیشن',
                     'subtitle': 'فناوری شده با هوش مصنوعی',
-                    'description': 'با ترکیب علم مدرن و هوش مصنوعی، تجربه‌ای کاملاً شخصی از مدیتیشن بسازید.\n'
+                    'description':
+                        'با ترکیب علم مدرن و هوش مصنوعی، تجربه‌ای کاملاً شخصی از مدیتیشن بسازید.\n'
                         'اپلیکیشن ما با تحلیل نیازهای احساسی شما، تمرین‌های مدیتیشنی را با صدای مورد علاقه شما پیشنهاد می‌دهد.',
                     'backgroundColor': Colors.white,
                   },
                 ],
               ),
-              
+
               // ردیف دوم (سه کارت جدید)
               _buildCardRow(
                 isDesktop: isDesktop,
@@ -67,7 +70,8 @@ class _CardStylesState extends State<CardStyles> {
                     'image': 'assets/pen.png',
                     'title': 'موسیقی آرامش‌بخش',
                     'subtitle': 'برای تمرکز و آرامش',
-                    'description': 'موسیقی‌هایی با ریتم ملایم و هماهنگ که ذهن شما را به سفری آرامش‌بخش می‌برند.\n'
+                    'description':
+                        'موسیقی‌هایی با ریتم ملایم و هماهنگ که ذهن شما را به سفری آرامش‌بخش می‌برند.\n'
                         'این بخش به شما کمک می‌کند تا در میان شلوغی روزمره، لحظاتی از آرامش را تجربه کنید.',
                     'backgroundColor': Colors.white,
                   },
@@ -75,7 +79,8 @@ class _CardStylesState extends State<CardStyles> {
                     'image': 'assets/man.png',
                     'title': 'یوگا',
                     'subtitle': 'تمرین برای جسم و ذهن',
-                    'description': 'تمرین‌های یوگا با راهنمایی قدم‌به‌قدم برای بهبود انعطاف‌پذیری و کاهش استرس.\n'
+                    'description':
+                        'تمرین‌های یوگا با راهنمایی قدم‌به‌قدم برای بهبود انعطاف‌پذیری و کاهش استرس.\n'
                         'مناسب برای همه سطوح، از مبتدی تا حرفه‌ای.',
                     'backgroundColor': Color(0xffF3F3F3),
                   },
@@ -83,13 +88,14 @@ class _CardStylesState extends State<CardStyles> {
                     'image': 'assets/note.png',
                     'title': 'یادداشت روزانه',
                     'subtitle': 'فضای شخصی برای افکار',
-                    'description': 'فضایی امن برای نوشتن افکار و احساسات روزانه‌تان.\n'
+                    'description':
+                        'فضایی امن برای نوشتن افکار و احساسات روزانه‌تان.\n'
                         'با ابزارهای هوشمند اپلیکیشن، می‌توانید الگوهای احساسی خود را تحلیل کنید.',
                     'backgroundColor': Colors.white,
                   },
                 ],
               ),
-              
+              SizedBox(height: 50),
               // کارد جدید زیر همه کارت‌ها
               _buildMeditationSection(
                 isDesktop: isDesktop,
@@ -97,9 +103,9 @@ class _CardStylesState extends State<CardStyles> {
                 isMobile: isMobile,
                 screenWidth: screenWidth,
               ),
-              
+
               SizedBox(height: isMobile ? 60 : 110),
-              
+
               // بخش موبایل
               _buildMobileSection(
                 isDesktop: isDesktop,
@@ -107,7 +113,7 @@ class _CardStylesState extends State<CardStyles> {
                 isMobile: isMobile,
                 screenWidth: screenWidth,
               ),
-              
+
               // دکمه‌های دانلود
               _buildDownloadButtons(
                 isDesktop: isDesktop,
@@ -140,22 +146,25 @@ class _CardStylesState extends State<CardStyles> {
           vertical: verticalPadding,
         ),
         child: Column(
-          children: cards.map((card) => 
-            Padding(
-              padding: const EdgeInsets.only(bottom: 16.0),
-              child: _buildCard(
-                image: card['image'],
-                title: card['title'],
-                subtitle: card['subtitle'],
-                description: card['description'],
-                backgroundColor: card['backgroundColor'],
-                isDesktop: isDesktop,
-                isTablet: isTablet,
-                isMobile: isMobile,
-                screenWidth: screenWidth,
-              ),
-            ),
-          ).toList(),
+          children:
+              cards
+                  .map(
+                    (card) => Padding(
+                      padding: const EdgeInsets.only(bottom: 16.0),
+                      child: _buildCard(
+                        image: card['image'],
+                        title: card['title'],
+                        subtitle: card['subtitle'],
+                        description: card['description'],
+                        backgroundColor: card['backgroundColor'],
+                        isDesktop: isDesktop,
+                        isTablet: isTablet,
+                        isMobile: isMobile,
+                        screenWidth: screenWidth,
+                      ),
+                    ),
+                  )
+                  .toList(),
         ),
       );
     }
@@ -169,19 +178,22 @@ class _CardStylesState extends State<CardStyles> {
         scrollDirection: Axis.horizontal,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: cards.map((card) => 
-            _buildCard(
-              image: card['image'],
-              title: card['title'],
-              subtitle: card['subtitle'],
-              description: card['description'],
-              backgroundColor: card['backgroundColor'],
-              isDesktop: isDesktop,
-              isTablet: isTablet,
-              isMobile: isMobile,
-              screenWidth: screenWidth,
-            ),
-          ).toList(),
+          children:
+              cards
+                  .map(
+                    (card) => _buildCard(
+                      image: card['image'],
+                      title: card['title'],
+                      subtitle: card['subtitle'],
+                      description: card['description'],
+                      backgroundColor: card['backgroundColor'],
+                      isDesktop: isDesktop,
+                      isTablet: isTablet,
+                      isMobile: isMobile,
+                      screenWidth: screenWidth,
+                    ),
+                  )
+                  .toList(),
         ),
       ),
     );
@@ -202,7 +214,7 @@ class _CardStylesState extends State<CardStyles> {
     double imageWidth;
     double fontSize;
     double subtitleFontSize;
-    
+
     if (isDesktop) {
       cardWidth = 384;
       imageWidth = 336;
@@ -267,10 +279,7 @@ class _CardStylesState extends State<CardStyles> {
                 description,
                 textAlign: TextAlign.center,
                 textDirection: TextDirection.rtl,
-                style: TextStyle(
-                  fontSize: isMobile ? 12 : 14,
-                  height: 1.5,
-                ),
+                style: TextStyle(fontSize: isMobile ? 12 : 14, height: 1.5),
                 maxLines: isMobile ? 4 : 5,
                 overflow: TextOverflow.ellipsis,
               ),
@@ -298,6 +307,7 @@ class _CardStylesState extends State<CardStyles> {
         alignment: Alignment.topCenter,
         children: [
           // تصویر پس‌زمینه
+          SizedBox(height: 20),
           Image.asset(
             'assets/background.png',
             width: double.infinity,
@@ -338,7 +348,9 @@ class _CardStylesState extends State<CardStyles> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: isMobile ? 12.0 : 16.0),
+                    padding: EdgeInsets.symmetric(
+                      horizontal: isMobile ? 12.0 : 16.0,
+                    ),
                     child: Text(
                       'ناماسته چطور به ما کمک میکند ؟',
                       style: GoogleFonts.vazirmatn(
@@ -359,7 +371,9 @@ class _CardStylesState extends State<CardStyles> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Padding(
-                            padding: EdgeInsets.symmetric(horizontal: isMobile ? 8.0 : 16.0),
+                            padding: EdgeInsets.symmetric(
+                              horizontal: isMobile ? 8.0 : 16.0,
+                            ),
                             child: Text(
                               'مدیتیشن، یعنی تمرین آگاهی. یعنی برگردوندن ذهن به لحظه‌ی حال، فارغ از گذشته و آینده',
                               style: GoogleFonts.vazirmatn(
@@ -372,7 +386,9 @@ class _CardStylesState extends State<CardStyles> {
                           ),
                           SizedBox(height: 4),
                           Padding(
-                            padding: EdgeInsets.symmetric(horizontal: isMobile ? 8.0 : 16.0),
+                            padding: EdgeInsets.symmetric(
+                              horizontal: isMobile ? 8.0 : 16.0,
+                            ),
                             child: Text(
                               'با تنفس، سکوت و تمرکز، به ذهنمون یاد می‌دیم که آرام‌تر و متعادل‌تر باشه.',
                               style: GoogleFonts.vazirmatn(
