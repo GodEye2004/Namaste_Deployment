@@ -63,7 +63,7 @@ class Nav extends StatelessWidget {
                   SizedBox(
                     width: 120,
                     height: 80,
-                    child: Image.asset('assets/logo.JPG', fit: BoxFit.contain),
+                    child: Image.asset('assets/logo.jpg', fit: BoxFit.contain),
                   ),
                 ],
               ),
