@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/landing/widget/footer.dart';
-import 'package:flutter_application_1/landing/widget/landingherosection.dart';
-import 'package:flutter_application_1/landing/widget/card.dart';
-import 'package:flutter_application_1/landing/widget/nav.dart';
+import 'package:flutter_application_1/landing/Desktop%20widget/footer.dart';
+import 'package:flutter_application_1/landing/Desktop%20widget/landingherosection.dart';
+import 'package:flutter_application_1/landing/Desktop%20widget/card.dart';
+import 'package:flutter_application_1/landing/Desktop%20widget/nav.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LandingDesktop extends StatefulWidget {
