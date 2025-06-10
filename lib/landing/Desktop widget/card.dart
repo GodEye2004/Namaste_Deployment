@@ -67,29 +67,31 @@ class _CardStylesState extends State<CardStyles> {
                 cards: [
                   {
                     'image': 'assets/pen.png',
-                    'title': 'موسیقی آرامش‌بخش',
-                    'subtitle': 'برای تمرکز و آرامش',
+                    'title': 'چالش های روزانه',
+                    'subtitle': 'گفتگوی زنده ولی ناشناس!',
                     'description':
-                        'موسیقی‌هایی با ریتم ملایم و هماهنگ که ذهن شما را به سفری آرامش‌بخش می‌برند.\n'
-                        'این بخش به شما کمک می‌کند تا در میان شلوغی روزمره، لحظاتی از آرامش را تجربه کنید.',
+                        'هر روز یک چالش تازه اینجا منتظرته. چالشی که درست وسط روز میاد و تو رو وارد یک گفت‌وگوی زنده می‌کنه.\n'
+                        'تو فقط یه بار جواب می‌دی، اما می‌تونی با بقیه تعامل کنی، جواب‌هاشون رو بخونی، ریپلای بزنی، الهام بگیری.',
                     'backgroundColor': Colors.white,
                   },
                   {
                     'image': 'assets/man.png',
-                    'title': 'یوگا',
-                    'subtitle': 'تمرین برای جسم و ذهن',
+                    'title': 'شکرگزاری روزانه',
+                    'subtitle': 'عادت معجزه ساز',
                     'description':
-                        'تمرین‌های یوگا با راهنمایی قدم‌به‌قدم برای بهبود انعطاف‌پذیری و کاهش استرس.\n'
-                        'مناسب برای همه سطوح، از مبتدی تا حرفه‌ای.',
+                        'توی دنیایی که مدام عجله داره، یه لحظه وایسا…\n'
+                        'نگاه کن به چیزای کوچیکی که خوشحالت کردن. یه پیام از یه دوست، نور آفتاب روی صورتت، یا حتی اون بوی قهوه‌ی اول صبح.',
+
                     'backgroundColor': Color(0xffF3F3F3),
                   },
                   {
                     'image': 'assets/note.png',
-                    'title': 'یادداشت روزانه',
-                    'subtitle': 'فضای شخصی برای افکار',
+                    'title': 'ثبت هوشمند خاطرات',
+                    'subtitle': 'دیجیتال، امن و فقط برای خودت',
                     'description':
-                        'فضایی امن برای نوشتن افکار و احساسات روزانه‌تان.\n'
-                        'با ابزارهای هوشمند اپلیکیشن، می‌توانید الگوهای احساسی خود را تحلیل کنید.',
+                        'احساساتت رو بنویس، عکس‌های خاص روزت رو ذخیره کن، غذاهایی که خوردی رو ثبت کن.\n'
+                        'چیزهایی که یاد گرفتی یا تجربه کردی رو یادداشت کن و حتی دستاوردهای کوچیک یا بزرگت رو مرور کن.',
+
                     'backgroundColor': Colors.white,
                   },
                 ],
@@ -278,7 +280,12 @@ class _CardStylesState extends State<CardStyles> {
                 description,
                 textAlign: TextAlign.center,
                 textDirection: TextDirection.rtl,
-                style: TextStyle(fontSize: isMobile ? 12 : 14, height: 1.5),
+                style: TextStyle(
+                  fontSize: isMobile ? 12 : 14,
+                  height: 1.5,
+                  fontFamily: 'IRANYekanX',
+                  fontWeight: FontWeight.w500,
+                ),
                 maxLines: isMobile ? 4 : 5,
                 overflow: TextOverflow.ellipsis,
               ),

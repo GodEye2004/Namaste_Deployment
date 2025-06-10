@@ -28,7 +28,7 @@ class LandingHeroSection extends StatelessWidget {
                         bottomRight: Radius.circular(40),
                       ),
                       child: Container(
-                        width: 539.w * scaleFactor,
+                        width: 489.w * scaleFactor,
                         height: 3100.h * scaleFactor,
                         decoration: BoxDecoration(
                           image: DecorationImage(
@@ -89,14 +89,15 @@ class LandingHeroSection extends StatelessWidget {
               Align(
                 alignment: Alignment.topRight,
                 child: Padding(
-                  padding: EdgeInsets.only(right: 160.w),
+                  padding: EdgeInsets.only(right: 150.w),
                   child: Text(
                     "ناماسته؛\n",
                     textAlign: TextAlign.center,
-                    style: GoogleFonts.vazirmatn(
+                    style: TextStyle(
+                      fontFamily: 'IRANYekanX',
                       fontSize: 32.sp,
                       fontWeight: FontWeight.w500,
-                      color: const Color(0xff1B1B1C),
+                      color: Color(0xff1B1B1C),
                     ),
                   ),
                 ),
@@ -104,23 +105,26 @@ class LandingHeroSection extends StatelessWidget {
               Text(
                 "اولین و تنها مرکز مدیتیشن ، ذهن آگاهی و\nتعامل کاربران ایرانی",
                 textAlign: TextAlign.end,
-                style: GoogleFonts.vazirmatn(
+                style: TextStyle(
+                  fontFamily: 'IRANYekanX',
                   fontSize: 24.sp,
                   fontWeight: FontWeight.w400,
-                  color: const Color(0xff1B1B1C),
+                  color: Color(0xff1B1B1C),
                 ),
               ),
+
               SizedBox(height: 60),
               Padding(
-                padding: EdgeInsets.only(left: 210.w),
+                padding: EdgeInsets.only(left: 235.w),
                 child: Row(
                   children: [
                     Text(
                       "مدیتیشن های فناوری شده با هوش مصنوعی",
-                      style: GoogleFonts.vazirmatn(
-                        fontSize: 18.sp,
-                        fontWeight: FontWeight.w500,
-                        color: const Color(0xff1B1B1C),
+                      style: TextStyle(
+                        fontFamily: 'IRANYekanX',
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xff1B1B1C),
                       ),
                     ),
                     SizedBox(width: 5.w),
@@ -128,16 +132,18 @@ class LandingHeroSection extends StatelessWidget {
                   ],
                 ),
               ),
+              const SizedBox(height: 10),
               Padding(
-                padding: EdgeInsets.only(left: 210.w),
+                padding: EdgeInsets.only(left: 292.w),
                 child: Row(
                   children: [
                     Text(
-                      "مدیتیشن های فناوری شده با هوش مصنوعی",
-                      style: GoogleFonts.vazirmatn(
-                        fontSize: 18.sp,
-                        fontWeight: FontWeight.w500,
-                        color: const Color(0xff1B1B1C),
+                      " داستان های صوتی و موزیک بی کلام",
+                      style: TextStyle(
+                        fontFamily: 'IRANYekanX',
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xff1B1B1C),
                       ),
                     ),
                     SizedBox(width: 5.w),
@@ -145,16 +151,18 @@ class LandingHeroSection extends StatelessWidget {
                   ],
                 ),
               ),
+              const SizedBox(height: 10),
               Padding(
-                padding: EdgeInsets.only(left: 210.w),
+                padding: EdgeInsets.only(left: 315.w),
                 child: Row(
                   children: [
                     Text(
-                      "مدیتیشن های فناوری شده با هوش مصنوعی",
-                      style: GoogleFonts.vazirmatn(
-                        fontSize: 18.sp,
-                        fontWeight: FontWeight.w500,
-                        color: const Color(0xff1B1B1C),
+                      "چت روم های عمومی و اختصاصی",
+                      style: TextStyle(
+                        fontFamily: 'IRANYekanX',
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xff1B1B1C),
                       ),
                     ),
                     SizedBox(width: 5.w),
@@ -162,7 +170,7 @@ class LandingHeroSection extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 90),
+              SizedBox(height: 50),
               Padding(
                 padding: EdgeInsets.only(right: 50.w),
                 child: Column(
