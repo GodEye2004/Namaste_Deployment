@@ -304,7 +304,7 @@ class FooterWidget extends StatelessWidget {
     required bool isFullWidth,
   }) {
     return Container(
-      width: isFullWidth ? double.infinity : 280,
+      width: isFullWidth ? double.infinity : 282,
       height: 50,
       child: ElevatedButton(
         onPressed: onPressed,
@@ -312,7 +312,7 @@ class FooterWidget extends StatelessWidget {
           backgroundColor: Colors.white,
           foregroundColor: Colors.black,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(25),
+            borderRadius: BorderRadius.circular(12),
           ),
           elevation: 0,
         ),
@@ -330,7 +330,7 @@ class FooterWidget extends StatelessWidget {
               ),
             ),
             SizedBox(width: 8),
-            Icon(Icons.download, size: 20),
+            // Icon(Icons.download, size: 20),
           ],
         ),
       ),

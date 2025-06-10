@@ -382,24 +382,30 @@ class _CardStylesState extends State<CardStyles> {
                             ),
                             child: Text(
                               'مدیتیشن، یعنی تمرین آگاهی. یعنی برگردوندن ذهن به لحظه‌ی حال، فارغ از گذشته و آینده',
-                              style: GoogleFonts.vazirmatn(
-                                fontSize: isMobile ? 12 : 14,
-                                color: Colors.black54,
+                              style: TextStyle(
+                                fontSize: isMobile ? 12 : 16,
+                                height: 1.5,
+                                fontFamily: 'IRANYekanX',
+                                fontWeight: FontWeight.w500,
+                                color: Color(0xff000000),
                               ),
                               textAlign: TextAlign.center,
                               textDirection: TextDirection.rtl,
                             ),
                           ),
-                          SizedBox(height: 4),
+                          SizedBox(height: 12),
                           Padding(
                             padding: EdgeInsets.symmetric(
                               horizontal: isMobile ? 8.0 : 16.0,
                             ),
                             child: Text(
                               'با تنفس، سکوت و تمرکز، به ذهنمون یاد می‌دیم که آرام‌تر و متعادل‌تر باشه.',
-                              style: GoogleFonts.vazirmatn(
+                              style: TextStyle(
                                 fontSize: isMobile ? 12 : 14,
-                                color: Colors.black54,
+                                height: 1.5,
+                                fontFamily: 'IRANYekanX',
+                                fontWeight: FontWeight.w400,
+                                color: Color(0xff000000),
                               ),
                               textAlign: TextAlign.center,
                               textDirection: TextDirection.rtl,
@@ -437,9 +443,8 @@ class _CardStylesState extends State<CardStyles> {
     required bool isMobile,
     required double screenWidth,
   }) {
-    final sectionHeight = isMobile ? 250.0 : 300.0;
-    final mobileImageHeight = isMobile ? 200.0 : 300.0;
-    final bottomPosition = isMobile ? 50.0 : 90.0;
+    final sectionHeight = isMobile ? 250.0 : 210.0;
+    final mobileImageHeight = isMobile ? 180.0 : 280.0;
 
     return SizedBox(
       height: sectionHeight,
@@ -449,16 +454,21 @@ class _CardStylesState extends State<CardStyles> {
           Image.asset(
             'assets/images.png',
             width: double.infinity,
+            height: sectionHeight,
             fit: BoxFit.cover,
           ),
           Positioned(
-            bottom: bottomPosition,
+            bottom: 0,
             left: 0,
             right: 0,
-            child: Image.asset(
-              'assets/mobile.png',
-              fit: BoxFit.contain,
+            child: Container(
               height: mobileImageHeight,
+              alignment: Alignment.bottomCenter,
+              child: Image.asset(
+                'assets/mobile.png',
+                fit: BoxFit.contain,
+                height: mobileImageHeight,
+              ),
             ),
           ),
         ],
@@ -479,6 +489,7 @@ class _CardStylesState extends State<CardStyles> {
 
     return Column(
       children: [
+        SizedBox(height: 48),
         ElevatedButton.icon(
           style: ElevatedButton.styleFrom(
             fixedSize: Size(buttonWidth, buttonHeight),
@@ -501,7 +512,7 @@ class _CardStylesState extends State<CardStyles> {
             ),
           ),
         ),
-        SizedBox(height: 10),
+        SizedBox(height: 37),
         ElevatedButton.icon(
           style: ElevatedButton.styleFrom(
             fixedSize: Size(buttonWidth, buttonHeight),

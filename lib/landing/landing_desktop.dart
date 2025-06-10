@@ -47,7 +47,7 @@ class _LandingDesktopState extends State<LandingDesktop> {
                   const SizedBox(height: 20),
                   // _buildServiceGrid(context),
                   CardStyles(),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 144),
                   FooterWidget(),
                 ],
               ),

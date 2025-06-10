@@ -177,13 +177,13 @@ class LandingHeroSection extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     _buildDownloadButton(
+                      icon: Icons.apple,
                       text: 'دانلود وب اپلیکیشن برای آیفون',
-                      icon: Icons.download,
                     ),
                     SizedBox(height: 20),
                     _buildDownloadButton(
-                      text: 'دانلود وب اپلیکیشن برای اندروید',
                       icon: Icons.android,
+                      text: 'دانلود وب اپلیکیشن برای اندروید',
                     ),
                   ],
                 ),
@@ -196,7 +196,7 @@ class LandingHeroSection extends StatelessWidget {
   }
 
   Widget _buildDownloadButton({required String text, required IconData icon}) {
-    return ElevatedButton.icon(
+    return ElevatedButton(
       style: ElevatedButton.styleFrom(
         minimumSize: Size(486, 48),
         backgroundColor: const Color(0xff1B1B1C),
@@ -204,10 +204,16 @@ class LandingHeroSection extends StatelessWidget {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
       onPressed: () {},
-      icon: Icon(icon, size: 24.sp, color: Colors.white),
-      label: Text(
-        text,
-        style: GoogleFonts.vazirmatn(fontSize: 16.sp, color: Colors.white),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            text,
+            style: GoogleFonts.vazirmatn(fontSize: 16.sp, color: Colors.white),
+          ),
+          SizedBox(width: 8.w), // Space between text and icon
+          Icon(icon, size: 24.sp, color: Colors.white),
+        ],
       ),
     );
   }

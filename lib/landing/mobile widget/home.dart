@@ -28,12 +28,18 @@ class _HomeState extends State<Home> {
               fontSize: 16,
               color: Color(0xff1B1B1C),
               fontWeight: FontWeight.w400,
+              fontFamily: 'IRANYekanX',
               height: 1.5,
             ),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 20),
-          Image.asset('assets/txtxs.png', fit: BoxFit.cover),
+          Image.asset(
+            'assets/txtxs.png',
+            fit: BoxFit.cover,
+            width: 342,
+            height: 70,
+          ),
           const SizedBox(height: 60),
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -47,6 +53,24 @@ class _HomeState extends State<Home> {
                     color: Color(0xffF0F4FD),
                     borderRadius: BorderRadius.circular(12),
                   ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Column(
+                      children: [
+                        Icon(Icons.android),
+                        const SizedBox(height: 10),
+                        Text(
+                          "دانلود وب اپلیکیشن\nبرای اندروید",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
                 Container(
                   width: 159,
@@ -55,6 +79,24 @@ class _HomeState extends State<Home> {
                     color: Color(0xff0F172A),
                     borderRadius: BorderRadius.circular(12),
                   ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Column(
+                      children: [
+                        Icon(Icons.apple, color: Colors.white),
+                        const SizedBox(height: 10),
+                        Text(
+                          "دانلود وب اپلیکیشن\nبرای آیفون",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
               ],
             ),
@@ -62,7 +104,15 @@ class _HomeState extends State<Home> {
           const SizedBox(height: 46),
           Image.asset('assets/mobileimg.png', fit: BoxFit.cover),
           const SizedBox(height: 64),
-          Text("خدمات"),
+          Text(
+            "خدمات",
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w500,
+              fontFamily: 'IRANYekanX',
+              color: Color(0xff1B1B1C),
+            ),
+          ),
         ],
       ),
     );

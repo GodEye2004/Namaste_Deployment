@@ -23,7 +23,7 @@ class Nav extends StatelessWidget {
                   height: 48,
                   decoration: BoxDecoration(
                     border: Border.all(color: const Color(0xff909097)),
-                    borderRadius: BorderRadius.circular(24),
+                    borderRadius: BorderRadius.circular(12),
                   ),
                   child: IconButton(
                     icon: const Icon(Icons.download),
@@ -115,9 +115,17 @@ class Nav extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  IconButton(
-                    icon: const Icon(Icons.download),
-                    onPressed: () {},
+                  Container(
+                    width: 48,
+                    height: 48,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: const Color(0xff909097)),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: IconButton(
+                      icon: const Icon(Icons.download),
+                      onPressed: () {},
+                    ),
                   ),
                   Text(
                     "Namasteh",
