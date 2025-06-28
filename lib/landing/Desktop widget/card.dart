@@ -387,7 +387,7 @@ class _CardStylesState extends State<CardStyles> {
                                 height: 1.5,
                                 fontFamily: 'IRANYekanX',
                                 fontWeight: FontWeight.w500,
-                                color: Color(0xff000000),
+                                color: Colors.black,
                               ),
                               textAlign: TextAlign.center,
                               textDirection: TextDirection.rtl,
@@ -405,7 +405,7 @@ class _CardStylesState extends State<CardStyles> {
                                 height: 1.5,
                                 fontFamily: 'IRANYekanX',
                                 fontWeight: FontWeight.w400,
-                                color: Color(0xff000000),
+                                color: Colors.black,
                               ),
                               textAlign: TextAlign.center,
                               textDirection: TextDirection.rtl,
@@ -415,18 +415,19 @@ class _CardStylesState extends State<CardStyles> {
                       ),
                     ),
                   ),
-                  Expanded(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Positioned(
+                        bottom: 150,
+                        child: Image.asset(
                           'assets/testing.png',
                           width: isMobile ? screenWidth * 0.7 : 384,
                           height: isMobile ? 180 : 247,
                           fit: BoxFit.contain,
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ],
               ),

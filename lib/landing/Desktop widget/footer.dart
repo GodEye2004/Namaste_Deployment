@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class FooterWidget extends StatelessWidget {
+  const FooterWidget({Key? key})
+    : super(key: key); // ✅ این خط رو اضافه یا اصلاح کن
+
   @override
   Widget build(BuildContext context) {
     return Directionality(
@@ -116,77 +119,89 @@ class FooterWidget extends StatelessWidget {
   }
 
   Widget AboutUsSection() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'درباره نامابسته',
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-            fontSize: 18,
+    return Padding(
+      padding: const EdgeInsets.only(right: 0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(bottom: 30),
+            child: Text(
+              'درباره نامابسته',
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
+              ),
+              textAlign: TextAlign.right,
+            ),
           ),
-          textAlign: TextAlign.right,
-        ),
-        SizedBox(height: 24),
-        Text(
-          'توی دنیایی که پر از شلوغی، اضطراب، و سرعت شده، ما تصمیم گرفتیم به مکث کوچیک بسازیم...\n\nبه پلتفرم که توی پیدا کردن خودت باهات، احساسات و پیش‌کاری تعمیق مدیتیشن کنی، تمرکز پیدا و ریزا پیدا شدن.',
-          style: TextStyle(color: Colors.white, fontSize: 14, height: 1.8),
-          textAlign: TextAlign.right,
-        ),
-      ],
+          SizedBox(height: 24),
+          Text(
+            'توی دنیایی که پر از شلوغی، اضطراب، و سرعت شده، ما تصمیم گرفتیم به مکث کوچیک بسازیم...\n\nبه پلتفرم که توی پیدا کردن خودت باهات، احساسات و پیش‌کاری تعمیق مدیتیشن کنی، تمرکز پیدا و ریزا پیدا شدن.',
+            style: TextStyle(color: Colors.white, fontSize: 14, height: 1.8),
+            textAlign: TextAlign.right,
+          ),
+        ],
+      ),
     );
   }
 
   Widget UsefulLinksSection() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'لینک های اصلی',
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-            fontSize: 18,
+    return Padding(
+      padding: const EdgeInsets.only(right: 126),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'لینک های اصلی',
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 18,
+            ),
           ),
-        ),
-        SizedBox(height: 24),
-        _buildLinkItem('صفحه اصلی'),
-        SizedBox(height: 16),
-        _buildLinkItem('سرویس ها'),
-        SizedBox(height: 16),
-        _buildLinkItem('درباره ما'),
-        SizedBox(height: 16),
-        _buildLinkItem('تماس با ما'),
-        SizedBox(height: 16),
-        _buildLinkItem('مجله'),
-      ],
+          SizedBox(height: 24),
+          _buildLinkItem('صفحه اصلی'),
+          SizedBox(height: 16),
+          _buildLinkItem('سرویس ها'),
+          SizedBox(height: 16),
+          _buildLinkItem('درباره ما'),
+          SizedBox(height: 16),
+          _buildLinkItem('تماس با ما'),
+          SizedBox(height: 16),
+          _buildLinkItem('مجله'),
+        ],
+      ),
     );
   }
 
   Widget MagazineSection() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'مجله نامابسته',
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-            fontSize: 18,
+    return Padding(
+      padding: const EdgeInsets.only(right: 126),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'مجله نامابسته',
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 18,
+            ),
           ),
-        ),
-        SizedBox(height: 24),
-        _buildLinkItem('صفحه اصلی'),
-        SizedBox(height: 16),
-        _buildLinkItem('سرویس ها'),
-        SizedBox(height: 16),
-        _buildLinkItem('درباره ما'),
-        SizedBox(height: 16),
-        _buildLinkItem('تماس با ما'),
-        SizedBox(height: 16),
-        _buildLinkItem('مجله'),
-      ],
+          SizedBox(height: 24),
+          _buildLinkItem('صفحه اصلی'),
+          SizedBox(height: 16),
+          _buildLinkItem('سرویس ها'),
+          SizedBox(height: 16),
+          _buildLinkItem('درباره ما'),
+          SizedBox(height: 16),
+          _buildLinkItem('تماس با ما'),
+          SizedBox(height: 16),
+          _buildLinkItem('مجله'),
+        ],
+      ),
     );
   }
 
