@@ -83,14 +83,12 @@ class _LandingDesktopState extends State<LandingDesktop> {
                       const SizedBox(height: 20),
                       CardStyles(),
                       const SizedBox(height: 144),
-                      FooterWidget(key: _footerKey), // کلید برای فوتر
+                      FooterWidget(key: _footerKey), 
                     ],
                   ),
                 ],
               ),
             ),
-
-            // سایه پایین صفحه
             Positioned(
               left: 0,
               right: 0,
